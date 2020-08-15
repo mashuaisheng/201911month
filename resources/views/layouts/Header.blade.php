@@ -46,10 +46,10 @@
 <!-- dcHead 结束 -->
     <div id="dcLeft"><div id="menu">
             <ul class="top">
-                <li><a href="index.html"><i class="home"></i><em>管理首页</em></a></li>
+                <li><a href="{{url('/Admin')}}"><i class="home"></i><em>管理首页</em></a></li>
             </ul>
             <ul>
-                <li><a href="system.html"><i class="system"></i><em>系统设置</em></a></li>
+                <li><a href="{{url('/Goods')}}"><i class="system"></i><em>购物车详情</em></a></li>
                 <li><a href="nav.html"><i class="nav"></i><em>自定义导航栏</em></a></li>
                 <li><a href="show.html"><i class="show"></i><em>首页幻灯广告</em></a></li>
                 <li><a href="page.html"><i class="page"></i><em>单页面管理</em></a></li>

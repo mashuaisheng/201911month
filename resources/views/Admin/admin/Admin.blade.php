@@ -1,5 +1,5 @@
 @extends('layouts.Header')
-@section('title', 'Laravel 学院')
+@section('title', '展示页面')
 @section('sidebar')
     @parent
     <div id="dcMain"> <!-- 当前位置 -->
