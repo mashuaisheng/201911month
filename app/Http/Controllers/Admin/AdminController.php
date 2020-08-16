@@ -9,6 +9,7 @@ class AdminController extends Controller
 {
     //
     public function Admin(){
+        //?
         return view("/Admin/admin/Admin");
     }
 }
