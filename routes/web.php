@@ -22,10 +22,6 @@ Route::get("/Login","Admin\LoginController@Login");
 //后台展示路由
 Route::get("/Admin","Admin\AdminController@Admin");
 
-<<<<<<< HEAD
-//购物车详情控制器
-Route::get("/Goods","Admin\GoodsContrller@index");
-=======
 //详情页控制器
 Route::get("/Goods","Admin\GoodsController@index");
 
@@ -40,10 +36,9 @@ Route::get("/Manager","Admin\ManagerController@Manager");
 Route::get("/Website","Admin\WebsiteController@Website");
 //热门推荐控制器
 Route::get("/Hot","Admin\HotController@Hot");
->>>>>>> miaomingming
 
-//网站访问量控制器
-Route::get("/Man","Admin\ManagementContrller@index");
+
+
 
 
 
