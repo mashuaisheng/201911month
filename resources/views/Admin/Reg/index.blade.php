@@ -19,31 +19,26 @@
                 dotColor: '#5cbdaa',
                 lineColor: '#5cbdaa'
             });
-            //验证码
-            createCode();
-            //测试提交，对接程序删除即可
-            $(".submit_btn").click(function(){
-                location.href="index.html";
-            });
         });
     </script>
 </head>
 <body>
 <dl class="admin_login">
     <dt>
-        <strong>站点后台管理系统</strong>
+        <strong>站点后台注册管理系统</strong>
         <em>Management System</em>
     </dt>
+    <form action="{{url('regDo')}}" method="post">
+        @csrf
     <dd class="user_icon">
-        <input type="text" placeholder="账号" class="login_txtbx"/>
+        <input type="text" placeholder="账号" name="name" class="login_txtbx"/>
     </dd>
     <dd class="pwd_icon">
-        <input type="password" placeholder="密码" class="login_txtbx"/>
+        <input type="password" placeholder="密码" name="pwd" class="login_txtbx"/>
     </dd>
-    <dd class="val_icon">
-    </dd>
+
     <dd>
-        <input type="button" value="立即注册" class="submit_btn"/>
+        <input type="submit" value="立即注册" class="submit_btn"/>
     </dd>
     <dd>
         <p>© 2015-2016 DeathGhost 版权所有</p>
