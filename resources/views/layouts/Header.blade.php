@@ -28,7 +28,7 @@
                     <li class="M noLeft"><a href="JavaScript:void(0);">您好，admin</a>
                         <div class="drop mUser">
                             <a href="manager.php?rec=edit&id=1">编辑我的个人资料</a>
-                            <a href="manager.php?rec=cloud_account">设置云账户</a>
+                            <a href="{{url('/Reg')}}">设置云账户</a>
                         </div>
                     </li>
                     <li class="noRight"><a href="login.php?rec=logout">退出</a></li>
@@ -68,7 +68,13 @@
                 <li><a href="theme.html"><i class="theme"></i><em>设置模板</em></a></li>
                 <li><a href="manager.html"><i class="manager"></i><em>网站管理员</em></a></li>
                 <li><a href="manager.php?rec=manager_log"><i class="managerLog"></i><em>操作记录</em></a></li>
+                <li><a href="{{url('/Goods')}}"><i class="system"></i><em>详情页</em></a></li>
+                <li><a href="{{url('/User')}}"><i class="nav"></i><em>用户管理</em></a></li>
+                <li><a href="{{url('/Manager')}}"><i class="show"></i><em>管理员管理</em></a></li>
+                <li><a href="{{url('/Website')}}"><i class="page"></i><em>新闻管理</em></a></li>
+                <li><a href="{{url('/Hot')}}"><i class="productCat"></i><em>热门推荐</em></a></li>
             </ul>
+
         </div>
     </div>
 
