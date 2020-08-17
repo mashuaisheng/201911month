@@ -4,8 +4,8 @@
     @parent
     <div id="dcMain">
         <!-- 当前位置 -->
-        <div id="urHere">DouPHP 管理中心<b>></b><strong>详情列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="add_product_category.html" class="actionBtn add">添加分类</a>详情列表</h3>
+        <div id="urHere">DouPHP 管理中心<b>></b><strong>网站访问量列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3><a href="add_product_category.html" ></a>网站访问量列表</h3>
             <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                 <tr>
                     <th width="120" align="left">分类名称</th>

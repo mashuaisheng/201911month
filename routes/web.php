@@ -23,10 +23,6 @@ Route::get("/Login","Admin\LoginController@Login");
 Route::post("/loginDo","Admin\LoginController@loginDo");
 //后台展示路由
 Route::get("/Admin","Admin\AdminController@Admin");
-
-//详情页控制器
-Route::get("/Goods","Admin\GoodsController@index");
-
 //网站访问量控制器
 Route::get("/Man","Admin\ManagementController@index");
 

@@ -49,7 +49,7 @@
                 <li><a href="{{url('/Admin')}}"><i class="home"></i><em>管理首页</em></a></li>
             </ul>
             <ul>
-                <li><a href="{{url('/Goods')}}"><i class="system"></i><em>详情页</em></a></li>
+                <li><a href="{{url('/Man')}}"><i class="system"></i>网站访问量管理<em></em></a></li>
                 <li><a href="{{url('/User')}}"><i class="nav"></i><em>用户管理</em></a></li>
                 <li><a href="{{url('/Manager')}}"><i class="show"></i><em>管理员管理</em></a></li>
                 <li><a href="{{url('/Hot')}}"><i class="page"></i><em>热门推荐管理</em></a></li>
