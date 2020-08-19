@@ -54,6 +54,7 @@
                 <li><a href="{{url('/Manager')}}"><i class="show"></i><em>管理员管理</em></a></li>
                 <li><a href="{{url('/Hot')}}"><i class="page"></i><em>热门推荐管理</em></a></li>
                 <li><a href="{{url('/Website')}}"><i class="page"></i><em>新闻管理</em></a></li>
+                <li><a href="{{url('/Cat')}}"><i class="page"></i><em>新闻分类</em></a></li>
             </ul>
         </div>
     </div>
