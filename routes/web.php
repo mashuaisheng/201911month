@@ -47,8 +47,10 @@ Route::any("/addDo","Admin\CatController@addDo");
 Route::get("/Hot","Admin\HotController@Hot");
 
 Route::prefix("/admin") -> group(function(){
+    //管理员添加
+    Route::get("/add","Admin\AdminisController@adminAdd");
     //管理员展示
-    Route::get("/add","Admin\AdminisController@adminList");
+    Route::get("/list","Admin\AdminisController@adminList");
 });
 
 
