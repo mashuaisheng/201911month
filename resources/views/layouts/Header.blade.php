@@ -55,14 +55,11 @@
                 <li><a href="{{url('/Hot')}}"><i class="page"></i><em>热门推荐管理</em></a></li>
                 <li><a href="{{url('/Website')}}"><i class="page"></i><em>新闻管理</em></a></li>
                 <li><a href="{{url('/Cat')}}"><i class="page"></i><em>新闻分类</em></a></li>
+                <li><a href="{{url('/Role')}}"><i class="page"></i><em>角色管理</em></a></li>
             </ul>
         </div>
     </div>
-
-
         @show
-
-
     {{--尾部--}}
     <div class="clear"></div>
     <div id="dcFooter">

@@ -28,9 +28,9 @@ Route::get("/Man","Admin\ManagementController@index");
 
 //用户管理控制器
 Route::get("/User","Admin\UserController@user");//用户展示
-Route::any("/delete/{id}","Admin\UserController@delete");//删除
-Route::get("/edit/{id}","Admin\UserController@edit");//修改试图
-Route::post('update/{id}','Admin\UserController@update');//编辑执行
+Route::any("/delete/{user_id}","Admin\UserController@delete");//删除
+Route::get("/edit/{user_id}","Admin\UserController@edit");//修改试图
+Route::post('update/{user_id}','Admin\UserController@update');//编辑执行
 //管理员管理控制器
 Route::get("/Manager","Admin\ManagerController@Manager");
 //新闻管理控制器
@@ -45,6 +45,11 @@ Route::any("/add","Admin\CatController@add");
 Route::any("/addDo","Admin\CatController@addDo");
 //热门推荐控制器
 Route::get("/Hot","Admin\HotController@Hot");
+
+
+//角色管理控制器
+Route::get("/Role","Admin\RoleController@Role");
+
 
 
 

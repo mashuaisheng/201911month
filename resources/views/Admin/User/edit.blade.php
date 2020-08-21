@@ -12,7 +12,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="{{url('/update/'.$user->id)}}" method="post" class="form-horizontal" role="form">
+<form action="{{url('/update/'.$user->user_id)}}" method="post" class="form-horizontal" role="form">
     @csrf
     <tr>
         <td>用户名</td>
