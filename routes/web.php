@@ -35,6 +35,14 @@ Route::post('update/{id}','Admin\UserController@update');//编辑执行
 Route::get("/Manager","Admin\ManagerController@Manager");
 //新闻管理控制器
 Route::get("/Website","Admin\WebsiteController@Website");
+Route::get("/adda","Admin\WebsiteController@adda");
+Route::any("/create","Admin\WebsiteController@create");
+Route::get("/edit2/{news_id}","Admin\WebsiteController@edit2");
+Route::any("/update2/{news_id}","Admin\WebsiteController@update2");
+//新闻分类管理
+Route::get("/Cat","Admin\CatController@Cat");
+Route::any("/add","Admin\CatController@add");
+Route::any("/addDo","Admin\CatController@addDo");
 //热门推荐控制器
 Route::get("/Hot","Admin\HotController@Hot");
 
