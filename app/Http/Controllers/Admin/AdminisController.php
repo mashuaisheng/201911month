@@ -30,7 +30,12 @@ class AdminisController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function adminAdd(){
-        return view( '/Admin/Admin_List/add' );
+       if(request()->method("get")){
+           return view( '/Admin/Admin_List/add' );
+       }
+        if(request()->method("post")){
+            dd("fdjkh");
+        }
     }
 
 
