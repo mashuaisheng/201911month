@@ -48,9 +48,11 @@ Route::get("/Hot","Admin\HotController@Hot");
 
 Route::prefix("/admin") -> group(function(){
     //管理员添加
-    Route::get("/add","Admin\AdminisController@adminAdd");
+    Route::any("/add","Admin\AdminisController@adminAdd");
     //管理员展示
     Route::get("/list","Admin\AdminisController@adminList");
+//    管理员添加数据
+    Route::post("/add_name","Admin\AdminisController@adminadd_name");
 });
 
 
