@@ -6,7 +6,7 @@
     <div id="dcMain">
         <!-- 当前位置 -->
         <div id="urHere">DouPHP 管理中心<b>></b><strong>权限节点管理</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="{{url('/Auth')}}" class="actionBtn">添加节点</a>节点列表</h3>
+            <h3><a href="{{url('/adds')}}" class="actionBtn">添加节点</a>节点列表</h3>
             <div class="navList">
                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                     <tr>
