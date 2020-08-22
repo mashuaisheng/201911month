@@ -16,13 +16,13 @@ class RegController extends Controller
         $data=request()->except("_token");
 
         $validator=Validator::make($data,[
-            'name'=>'required|unique:users',
-            'pwd'=>'required|min:6',
+            'user_name'=>'required|unique:user',
+            'user_pwd'=>'required|min:6',
         ],[
-            'name.required'=>'用户名不能为空',
-            'name.unique'=>'用户名重复',
-            'pwd.required'=>'密码不能为空',
-            'pwd.min'=>'密码至少为六位',
+            'user_name.required'=>'用户名不能为空',
+            'user_name.unique'=>'用户名重复',
+            'user_pwd.required'=>'密码不能为空',
+            'user_pwd.min'=>'密码至少为六位',
         ]);
 
         if($validator->fails()){

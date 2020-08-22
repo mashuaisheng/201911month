@@ -11,19 +11,17 @@
                 <tr>
                     <td width="30" align="center">用户id</td>
                     <td align="left">用户名称</td>
-                    <td align="center">用户手机</td>
                     <td align="center">注册时间</td>
                     <td align="center">操作</td>
                 </tr>
                     @foreach($user as $k =>$v)
                     <tr>
-                        <td width="30" align="center">{{$v->id}}</td>
-                        <td>{{$v->name}}</td>
-                        <td>{{$v->phone}}</td>
+                        <td width="30" align="center">{{$v->user_id}}</td>
+                        <td>{{$v->user_name}}</td>
                         <td>{{date('Y-m-d H:i:s',$v->reg_time)}}</td>
                         <td>
-                            <a href="{{url('/delete/'.$v->id)}}">删除</a>
-                            <a href="{{url('/edit/'.$v->id)}}">编辑</a>
+                            <a href="{{url('/delete/'.$v->user_id)}}">删除</a>
+                            <a href="{{url('/edit/'.$v->user_id)}}">编辑</a>
                         </td>
                     </tr>
                     @endforeach
@@ -34,4 +32,6 @@
     </div>
 
 @endsection
+
+
 

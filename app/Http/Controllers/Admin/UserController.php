@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     //展示试图
     public function user(){
-        $user= UserModel::orderBy('id','desc')->Paginate(3);
+        $user= UserModel::orderBy('user_id','desc')->Paginate(3);
         return view('Admin.User.index',['user'=>$user,'user'=>$user]);
     }
     //执行删除
@@ -21,15 +21,15 @@ class UserController extends Controller
         }
     }
     //修改试图
-    public function edit($id){
-        $user  = UserModel::find($id);
+    public function edit($user_id){
+        $user  = UserModel::find($user_id);
         return view('Admin.User.edit',['user'=>$user]);
     }
     //执行修改
-    public function update(Request $request, $id){
+    public function update(Request $request, $user_id){
         $post = request()->except(['_token']);
 
-        $res = UserModel::where('id',$id)->update($post);
+        $res = UserModel::where('user_id',$user_id)->update($post);
         if($res!==false){
             return redirect('/User');
         }
