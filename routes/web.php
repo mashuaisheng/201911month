@@ -46,6 +46,15 @@ Route::any("/addDo","Admin\CatController@addDo");
 //热门推荐控制器
 Route::get("/Hot","Admin\HotController@Hot");
 
+Route::prefix("/admin") -> group(function(){
+    //管理员添加
+    Route::get("/add","Admin\AdminisController@adminAdd");
+    //管理员展示
+    Route::get("/list","Admin\AdminisController@adminList");
+});
+
+
+
 
 //角色管理控制器
 Route::get("/Role","Admin\RoleController@Role");

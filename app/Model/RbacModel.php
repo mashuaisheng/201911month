@@ -4,10 +4,10 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class NewsModel extends Model
+class RbacModel extends Model
 {
-    public $table = 'news';  //声明model使用的表
-    protected $primaryKey ='news_id';  //声明表的主键
+    public $table = 'rbac_admin';  //声明model使用的表
+    protected $primaryKey ='admin_id';  //声明表的主键
     public $timestamps = false; //时间戳
     protected $guarded = [];//黑名单
 }

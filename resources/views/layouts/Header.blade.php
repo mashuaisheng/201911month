@@ -55,8 +55,11 @@
                 <li><a href="{{url('/Hot')}}"><i class="page"></i><em>热门推荐管理</em></a></li>
                 <li><a href="{{url('/Website')}}"><i class="page"></i><em>新闻管理</em></a></li>
                 <li><a href="{{url('/Cat')}}"><i class="page"></i><em>新闻分类</em></a></li>
+
                 <li><a href="{{url('/Role')}}"><i class="page"></i><em>角色管理</em></a></li>
                 <li><a href="{{url('/Auth')}}"><i class="page"></i><em>权限节点管理</em></a></li>
+                <li><a href="{{url('/admin/list')}}"><i class="system"></i>管理员管理列表<em></em></a></li>
+                <li><a href="{{url('/admin/add')}}"><i class="system"></i>管理员添加<em></em></a></li>
             </ul>
         </div>
     </div>
