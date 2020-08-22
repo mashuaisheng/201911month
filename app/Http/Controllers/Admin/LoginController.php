@@ -16,23 +16,23 @@ class LoginController extends Controller
     public function loginDo(){
         $data=request()->except('_token');
         $validator=Validator::make($data,[
-            'name'=>'required',
-            'pwd'=>'required',
+            'user_name'=>'required',
+            'user_pwd'=>'required',
         ],[
             'user_name.required'=>'用户名不能为空',
-            'pwd.required'=>'密码不能为空',
+            'user_pwd.required'=>'密码不能为空',
         ]);
         if($validator->fails()){
             return redirect('Login')->withErrors($validator)->withInput();
         }
         $where=[
-            ["name","=",$data['name']],
-            ["pwd","=",$data['pwd']]
+            ["user_name","=",$data['user_name']],
+            ["user_pwd","=",$data['user_pwd']]
         ];
         $res=UserModel::where($where)->first();
         //dd($res);
         if($res){
-            $a=session(["id"=>$res['id']]);
+            $a=session(["user_id"=>$res['user_id']]);
             //dd($a);die;
             return redirect('/Admin');
         }else{

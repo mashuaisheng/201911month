@@ -49,6 +49,13 @@ Route::get("/Hot","Admin\HotController@Hot");
 
 //角色管理控制器
 Route::get("/Role","Admin\RoleController@Role");
+Route::get("/add","Admin\RoleController@add");
+Route::any("/addDo","Admin\RoleController@addDo");
+//权限节点管理控制器
+Route::get("/Auth","Admin\AuthController@Auth");
+Route::get("/add","Admin\AuthController@add");
+Route::any("/addDo","Admin\AuthController@addDo");
+
 
 
 

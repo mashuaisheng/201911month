@@ -31,10 +31,10 @@
     <form action="{{url('regDo')}}" method="post">
         @csrf
     <dd class="user_icon">
-        <input type="text" placeholder="账号" name="name" class="login_txtbx"/>
+        <input type="text" placeholder="账号" name="user_name" class="login_txtbx"/>
     </dd>
     <dd class="pwd_icon">
-        <input type="password" placeholder="密码" name="pwd" class="login_txtbx"/>
+        <input type="password" placeholder="密码" name="user_pwd" class="login_txtbx"/>
     </dd>
 
     <dd>
