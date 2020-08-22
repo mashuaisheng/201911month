@@ -9,12 +9,54 @@ use App\Model\NodeModel;
 class AuthController extends Controller
 {
     public function add(){
-        return view("/Admin/Auth/index");
+        $role= NodeModel::get();
+        return view('Admin/Auth/index',['role'=>$role]);
     }
-    public function Auth(){
-        //$res= NodeModel::orderBy('power_node_id','desc')->get();
-        $res=NodeModel::get();
-        return view('/Admin/Auth/create',['res'=>$res]);
+    public function Auth(Request $request){
+        $power_node_model = new NodeModel();
+
+        if( $request -> method() == "POST"  )
+        {
+            $power_node_model -> power_node_name =  $request -> post('node_name');
+            if( empty( $request -> post('power_node_pid') ) ){
+                $power_node_model -> power_node_level =  1;
+            }else{
+                $power_node_model -> power_node_level =  2;
+            }
+            $power_node_model -> power_node_pid = $request -> post('power_node_pid');
+            $power_node_model -> power_node_url= $request -> post('path');
+
+            $power_node_model -> status = $request -> post('status');
+            $power_node_model -> ctime = time();
+
+            if( $power_node_model -> save() ){
+                return [
+                    'status' => 200,
+                    'msg' => 'success'
+                ];
+            }else{
+                return [
+                    'status' => 1,
+                    'msg' => 'fail'
+                ];
+            }
+        }
+
+        # 查询出系统现有的父级节点
+
+        # 查询所有一级的节点
+        $where = [
+            [ 'power_node_level' , '=' , 1],
+            [ 'status'  , '=' , 1 ]
+        ];
+
+
+        $power_node_list = $power_node_model -> where( $where ) -> get();
+
+//        dd( $power_node_list );
+        return view('/Admin/Auth/create' , [
+            'power_list' => $power_node_list
+        ]);
     }
     //执行添加
     public function addDo(){

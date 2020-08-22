@@ -19,9 +19,9 @@
                     <tr>
                         <td>父级节点</td>
                         <td>
-                            <select name="pid">
+                            <select name="power_node_pid">
                                 <option value="">--请选择--</option>
-                                @foreach($res as $k=>$v)
+                                @foreach($power_list as $k=>$v)
                                     <option value="{{$v->power_node_id}}">{{$v->power_node_name}}</option>
                                 @endforeach
                             </select><br>

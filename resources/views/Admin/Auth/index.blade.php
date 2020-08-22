@@ -10,21 +10,24 @@
             <div class="navList">
                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                     <tr>
-                        <th width="30" align="center">编号</th>
-                        <th align="left">管理员名称</th>
-                        <th align="center">E-mail地址</th>
-                        <th align="center">添加时间</th>
-                        <th align="center">最后登录时间</th>
-                        <th align="center">操作</th>
+                        <td width="30" align="center">权限节点id</td>
+                        <td align="left">权限节点的名称</td>
+                        <td align="center">权限对应的访问路径</td>
+                        <td align="center">添加时间</td>
+                        <td align="center">操作</td>
                     </tr>
-                    <tr>
-                        <td align="center">1</td>
-                        <td>admin</td>
-                        <td align="center"></td>
-                        <td align="center">2016-02-25</td>
-                        <td align="center">2016-02-26 20:53:17</td>
-                        <td align="center"><a href="addmanager.html?rec=edit&id=1">编辑</a> | <a href="manager.html?rec=del&id=1">删除</a></td>
-                    </tr>
+                    @foreach($role as $k =>$v)
+                        <tr>
+                            <td width="30" align="center">{{$v->power_node_id}}</td>
+                            <td>{{$v->power_node_name}}</td>
+                            <td>{{$v->power_node_url}}</td>
+                            <td>{{date('Y-m-d H:i:s',$v->ctime)}}</td>
+                            <td>
+                                <a href="{{url('/delete/'.$v->role_id)}}">删除</a>
+                                <a href="{{url('/edit/'.$v->role_id)}}">编辑</a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </table>
             </div>
         </div>
