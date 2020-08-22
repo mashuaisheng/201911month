@@ -8,11 +8,11 @@ use App\Model\NodeModel;
 //权限节点管理
 class AuthController extends Controller
 {
-    public function adds(){
+    public function Auth(){
         $role= NodeModel::get();
         return view('Admin/Auth/index',['role'=>$role]);
     }
-    public function Auth(Request $request){
+    public function adds(Request $request){
         $power_node_model = new NodeModel();
 
         if( $request -> method() == "POST"  )
