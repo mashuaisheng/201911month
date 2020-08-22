@@ -1,13 +1,14 @@
 @extends('layouts.Header')
-@section('title', '购物车详情展示页面')
+@section('title', '权限节点添加')
 @section('sidebar')
     @parent
+
     <div id="dcMain">
         <!-- 当前位置 -->
-        <div id="urHere">DouPHP 管理中心<b>></b><strong>权限节点列表</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="add_product_category.html" ></a>权限节点添加</h3>
-            <form action="{{url('/addDo')}}" method="post">
-                <table border=1 style="color: blue">
+        <div id="urHere">DouPHP 管理中心<b>></b><strong>权限节点列表</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3><a href="{{url('/addDo')}}" class="actionBtn">权限节点列表</a>节点添加</h3>
+            <form action="" method="post">
+                <table border="1">
                     <tr>
                         <td>节点名称</td>
                         <td><input type="text" name="power_node_name"></td>
@@ -34,8 +35,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td><button type="submit" class="btn btn-info">添加</button></td>
+                        <td>
+                            <input type="submit" value="立即提交">
+                        </td>
                     </tr>
                 </table>
             </form>

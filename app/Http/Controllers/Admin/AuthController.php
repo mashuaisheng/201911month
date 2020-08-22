@@ -8,7 +8,7 @@ use App\Model\NodeModel;
 //权限节点管理
 class AuthController extends Controller
 {
-    public function add(){
+    public function adds(){
         $role= NodeModel::get();
         return view('Admin/Auth/index',['role'=>$role]);
     }

@@ -62,7 +62,7 @@ Route::get("/add","Admin\RoleController@add");
 Route::any("/addDo","Admin\RoleController@addDo");
 //权限节点管理控制器
 Route::get("/Auth","Admin\AuthController@Auth");
-Route::get("/add","Admin\AuthController@add");
+Route::get("/adds","Admin\AuthController@adds");
 Route::any("/addDo","Admin\AuthController@addDo");
 
 
