@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\CommonController;
 use Illuminate\Http\Request;
 use App\Model\RoleModel;
+use App\Model\NodeModel;
+use App\Model\RolePowerRelationModel;
+use Illuminate\Support\Facades\DB;
 //角色管理控制器
-class RoleController extends Controller
+class RoleController extends CommonController
 {
     public function Role(){
         $role= RoleModel::get();
@@ -15,12 +18,7 @@ class RoleController extends Controller
     public function add(){
         return view('Admin/Role/create');
     }
-    public function addDo(){
-        $post = request()->except(['_token']);
-        $post['ctime']=time();
-        $res=RoleModel::insert($post);
-        if($res){
-            return redirect("/Role");
-        }
+    public function addDo(Request $request)
+    {
     }
 }
