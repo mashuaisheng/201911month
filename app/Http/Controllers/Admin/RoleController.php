@@ -20,5 +20,11 @@ class RoleController extends CommonController
     }
     public function addDo(Request $request)
     {
+        $post = request()->except(['_token']);
+        $post['ctime']=time();
+        $res=RoleModel::insert($post);
+        if($res){
+            return redirect("/Role");
+        }
     }
 }
