@@ -6,7 +6,7 @@
     <div id="dcMain">
         <!-- 当前位置 -->
         <div id="urHere">DouPHP 管理中心<b>></b><strong>分类管理</strong> </div>   <div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="{{url('/add')}}" class="actionBtn">添加分类</a>分类列表</h3>
+            <h3><a href="{{url('/addc')}}" class="actionBtn">添加分类</a>分类列表</h3>
             <div class="navList">
                 <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
                     <tr>

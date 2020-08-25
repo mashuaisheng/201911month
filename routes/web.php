@@ -41,7 +41,7 @@ Route::get("/edit2/{news_id}","Admin\WebsiteController@edit2");
 Route::any("/update2/{news_id}","Admin\WebsiteController@update2");
 //新闻分类管理
 Route::get("/Cat","Admin\CatController@Cat");
-Route::any("/add","Admin\CatController@add");
+Route::any("/addc","Admin\CatController@addc");
 Route::any("/addDo","Admin\CatController@addDo");
 //热门推荐控制器
 Route::get("/Hot","Admin\HotController@Hot");

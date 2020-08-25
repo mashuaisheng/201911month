@@ -64,7 +64,7 @@ class AuthController extends Controller
         $post['ctime']=time();
         $res=NodeModel::insert($post);
         if($res){
-            return redirect("/add");
+            return redirect("/Auth");
         }
     }
 }

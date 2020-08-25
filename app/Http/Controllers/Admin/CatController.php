@@ -14,7 +14,7 @@ class CatController extends Controller
         return view('Admin.Cat.index',['cat'=>$cat]);
     }
 
-    public function add(){
+    public function addc(){
         return view('Admin.Cat.create');
     }
     //执行添加

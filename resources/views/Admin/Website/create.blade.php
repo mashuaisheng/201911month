@@ -8,7 +8,7 @@
         <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
             <h3><a href="{{url('/Website')}}" class="actionBtn">新闻列表</a>新闻添加</h3>
             <div class="items">
-                <form action="{{url('/addDo')}}" method="post" enctype="multipart/form-data">
+                <form action="{{url('/create')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div id="main">
                         <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
