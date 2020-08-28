@@ -25,7 +25,7 @@
                             <td>{{$v->news_content}}</td>
                             <td>{{$v->cat_name}}</td>
                             <td>{{$v->news_img}}</td>
-                            <td>{{date('Y-m-d H:i:s',$v->publish_time)}}</td>
+                            <td width="30">{{date('Y-m-d H:i:s',$v->publish_time)}}</td>
                             <td>
                                 <a href="{{url('/del/'.$v->news_id)}}">删除</a>
                                 <a href="{{url('/edit2/'.$v->news_id)}}">编辑</a>
